@@ -77,8 +77,12 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.fPoSNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 5; // 95% of 5
-        consensus.nMinerConfirmationWindow = 5; // nTargetTimespan / nTargetSpacing
+
+        consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
+        consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4
+        // consensus.nRuleChangeActivationThreshold = 5; // 95% of 5
+        // consensus.nMinerConfirmationWindow = 5; // nTargetTimespan / nTargetSpacing
+	    
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
@@ -127,7 +131,13 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0000066a55d5635a0407b14644535ba3764338ccf066766a56300686291b3364"));
         assert(genesis.hashMerkleRoot == uint256S("0x02c6afd143966760b5b99c42d5ef9701f38f70f4c86c0a4fe63efd5518102ee9"));
    
-        // official seed
+	vSeeds.push_back(CDNSSeedData("dnsseed.shibamore.cloud", "vps.shibamore.cloud"));
+	vSeeds.push_back(CDNSSeedData("dnsseed2.shibamore.cloud", "dnsseed2.shibamore.cloud"));
+	vSeeds.push_back(CDNSSeedData("dnsseed3.shibamore.cloud", "dnsseed3.shibamore.cloud"));
+	vSeeds.push_back(CDNSSeedData("dnsseed4.shibamore.cloud", "dnsseed4.shibamore.cloud"));
+	vSeeds.push_back(CDNSSeedData("dnsseed5.shibamore.cloud", "dnsseed5.shibamore.cloud"));
+	vSeeds.push_back(CDNSSeedData("dnsseed6.shibamore.cloud", "dnsseed6.shibamore.cloud"));
+	
         vSeeds.push_back(CDNSSeedData("51.77.48.45", "51.77.48.45",true));
         vSeeds.push_back(CDNSSeedData("51.195.249.132", "51.195.249.132",true));
         vSeeds.push_back(CDNSSeedData("135.125.225.55", "135.125.225.55",true));	
