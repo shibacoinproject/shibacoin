@@ -136,7 +136,6 @@ public:
 	vSeeds.push_back(CDNSSeedData("dnsseed3.shibamore.cloud", "dnsseed3.shibamore.cloud"));
 	vSeeds.push_back(CDNSSeedData("dnsseed4.shibamore.cloud", "dnsseed4.shibamore.cloud"));
 	vSeeds.push_back(CDNSSeedData("dnsseed5.shibamore.cloud", "dnsseed5.shibamore.cloud"));
-	vSeeds.push_back(CDNSSeedData("dnsseed6.shibamore.cloud", "dnsseed6.shibamore.cloud"));
 	
         vSeeds.push_back(CDNSSeedData("51.77.48.45", "51.77.48.45",true));
         vSeeds.push_back(CDNSSeedData("51.195.249.132", "51.195.249.132",true));
